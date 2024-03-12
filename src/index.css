@@ -25,19 +25,22 @@ code {
 .imageGrid {
   position: relative;
   overflow: hidden;
-  padding: 20%;
   border: 0.5px solid #e2e2e2;
   border-radius: 4px;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 img.imageDisplay {
-  width: 100%;
-  height: 25vh;
+  width: 80%;
+  height: 73%;
   box-shadow: 3px 4px 7px darkgray;
   border-radius: 3px;
   display: block;
   position: relative;
-  /* margin: 2%; */
 }
 
 @keyframes enterDetail {
@@ -52,17 +55,19 @@ img.imageDisplay {
 
 .detailsContainer {
   position: absolute;
-    display: block;
-    background: #0000007d;
-    height: 90%;
-    top: 40%;
-    width: 100%;
-    z-index: 1;
-    right: 0;
-    border-radius: 3px;
-    animation: enterDetail 0.8s;
-    box-shadow: 1px -2px 4px 0px #383737;
+  display: block;
+  background: #0000007d;
+  height: 90%;
+  top: 40%;
+  width: 100%;
+  z-index: 1;
+  right: 0;
+  border-radius: 3px;
+  animation: enterDetail 0.8s;
+  box-shadow: 1px -2px 4px 0px #383737;
 }
+
+.homePageContainer {}
 
 
 @media only screen and (max-width: 600px) {
@@ -70,7 +75,12 @@ img.imageDisplay {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  img.imageDisplay{
+  .imageGrid {
+    height: 16vh;
+  }
+
+  img.imageDisplay {
     height: 10vh;
+    width: 77%;
   }
 }

@@ -3,7 +3,7 @@ import PhotoGalleryUnplashRouting from "./routing/PhotoGalleryUnplashRouting";
 
 function App() {
   return (
-    <div>
+    <div className="homePageContainer">
       <PhotoGalleryUnplashRouting />
     </div>
   );

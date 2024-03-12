@@ -1,33 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLoaderData } from "react-router-dom";
+import PhotoGridComponent from "./PhotoGridComponent";
 
 export default function PhotoGallerySearchPhotoDisplay() {
   const { results } = useLoaderData();
-  const [showImgDetail, setShowImgDetail] = useState("");
-  console.log("loadedGallery", results);
-  const showImageDetails = (image) => {
-    setShowImgDetail(image.id);
-    console.log("image", image);
-  };
-  return (
-    <div className="imageDisplayContainer">
-      {results.map((image) => {
-        const { urls, alt_description, id } = image;
-        return (
-          <div className="imageGrid" key={id}>
-            <img
-              className="imageDisplay"
-              src={urls.small}
-              alt={alt_description}
-              onClick={() => showImageDetails(image)}
-              onMouseOver={() => showImageDetails(image)}
-            />
-            {showImgDetail === id && (
-              <div className="detailsContainer">hiii</div>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
+
+  return <PhotoGridComponent results={results} />;
 }
