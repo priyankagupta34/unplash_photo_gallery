@@ -46,7 +46,7 @@ export default function SearchComponent({ image }) {
         </form>
       </div>
       <div className="recents">
-        {searchedValues.map((sear) => (
+        {(searchedValues || []).map((sear) => (
           <div className="chips">{sear}</div>
         ))}
       </div>
