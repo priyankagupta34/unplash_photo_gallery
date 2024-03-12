@@ -194,11 +194,12 @@ title {
 }
 .chips{
   padding: 5px;
-  background: #e2e2e2;
+  background: rgb(253, 253, 253);;
   margin: 8px;
   border-radius: 2px;
-  font-size: small;
-  box-shadow: 1px 1px 1px gray;
+  font-size: x-small;
+  box-shadow: 1px 1px 1px rgb(127, 127, 127);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {

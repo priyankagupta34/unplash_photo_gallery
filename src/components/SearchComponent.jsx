@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import localStorage from "../utils/localStorage";
+import { IoIosSearch } from "react-icons/io";
+
 
 export default function SearchComponent({ image }) {
   const ref = useRef();
@@ -47,7 +49,7 @@ export default function SearchComponent({ image }) {
       </div>
       <div className="recents">
         {(searchedValues || []).map((sear) => (
-          <div className="chips">{sear}</div>
+          <div className="chips" onClick={() => navigate(`/photos/${sear}`)}><IoIosSearch /> {sear}</div>
         ))}
       </div>
     </div>
