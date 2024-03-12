@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PhotoThumbnailDetailComponent from "./PhotoThumbnailDetailComponent";
 import { IoCloudDownloadOutline } from "react-icons/io5";
-import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { downloadPhoto } from "../services/PhotoGalleryUnplashService";
 
 export default function PhotoGridComponent({ results }) {
@@ -31,7 +31,7 @@ export default function PhotoGridComponent({ results }) {
         return (
           <div className="imageGrid" key={id}>
             <div className="iconHeart">
-              <FaHeart /> <span> {likes}</span>
+              <FaRegHeart /> <span>{`Likes: ${likes}`}</span>
             </div>
             <div
               className="icon"
