@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PhotoThumbnailDetailComponent from "./PhotoThumbnailDetailComponent";
 import { IoCloudDownloadOutline } from "react-icons/io5";
+import { FaHeart } from "react-icons/fa";
 import { downloadPhoto } from "../services/PhotoGalleryUnplashService";
 
 export default function PhotoGridComponent({ results }) {
@@ -26,9 +27,12 @@ export default function PhotoGridComponent({ results }) {
   return (
     <div className="imageDisplayContainer">
       {results.map((image) => {
-        const { urls, alt_description, id, links } = image;
+        const { urls, alt_description, id, links, likes } = image;
         return (
           <div className="imageGrid" key={id}>
+            <div className="iconHeart">
+              <FaHeart /> <span> {likes}</span>
+            </div>
             <div
               className="icon"
               onClick={() => downloadPhotoSyn(links.download_location)}
