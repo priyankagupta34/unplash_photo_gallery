@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import localStorage from "../utils/localStorage";
 import { IoIosSearch } from "react-icons/io";
@@ -43,7 +42,7 @@ export default function SearchComponent({ image }) {
             placeholder="Search here"
           />
           <button type="submit">
-            <FaSearch />
+            <IoIosSearch />
           </button>
         </form>
       </div>
