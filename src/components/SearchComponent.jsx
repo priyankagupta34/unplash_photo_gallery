@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import useLocalStorage from "../hooks/useLocalStorage";
+import localStorage from "../utils/localStorage";
 
 export default function SearchComponent({ image }) {
   const ref = useRef();
   const navigate = useNavigate();
   const [value, setValue] = useState("");
-  const localStorage = useLocalStorage();
-  const [searchedValues, setSearchedValues] = useState([]);
-  useEffect(() => {
-    ref.current?.focus();
-    setSearchedValues(localStorage.get() || [])
-  }, [localStorage]);
+  const ls = localStorage();
+  const [searchedValues, setSearchedValues] = useState(ls.get());
+  // useEffect(() => {
+  //   ref.current?.focus();
+  //   setSearchedValues(localStorage.get() || [])
+  // }, [localStorage]);
 
   const inputSearch = (e) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ export default function SearchComponent({ image }) {
     searchedInputs = [...new Set(searchedInputs)];
     setSearchedValues(searchedInputs);
     // console.log()
-    localStorage.set(searchedInputs);
+    ls.set(searchedInputs);
     setValue("");
     navigate(`/photos/${value}`);
   };
