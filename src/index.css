@@ -208,4 +208,13 @@ title {
   .photoDetailBlockDiv {
     font-size: xx-small;
   }
+  .homeBackground{
+    height: 28vh;
+  }
+  .searchArea button{
+    width: 10vw;
+  }
+  .searchArea input{
+    width: 50vw;
+  }
 }
