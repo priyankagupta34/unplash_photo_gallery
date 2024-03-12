@@ -13,7 +13,7 @@ export default function PhotoGallerySearchPhotoDisplay() {
     const timer = setInterval(() => {
       const val = Math.floor(Math.random() * results.length);
       setIdx(val);
-    }, 5000);
+    }, 50000);
     return () => clearInterval(timer);
   }, [results]);
 

@@ -138,10 +138,10 @@ img.imageDisplay {
   font-size: x-small;
   font-weight: 600;
   padding: 0px;
-  margin-left: 5px;
   position: inherit;
   margin-top: 3px;
   width: 100px;
+  margin-left: -14px;
 }
 
 .homeBackground {
@@ -183,6 +183,24 @@ title {
   font-size: xxx-large;
 }
 
+/* .recentSearch{
+  
+} */
+
+.recents{
+  margin: 34px;
+  display: flex;
+  justify-content: center;
+}
+.chips{
+  padding: 5px;
+  background: #e2e2e2;
+  margin: 8px;
+  border-radius: 2px;
+  font-size: small;
+  box-shadow: 1px 1px 1px gray;
+}
+
 @media only screen and (max-width: 600px) {
   .iconHeart span {
     font-size: xx-small;
@@ -216,5 +234,8 @@ title {
   }
   .searchArea input{
     width: 50vw;
+  }
+  .recents {
+    margin: 13px;
   }
 }
