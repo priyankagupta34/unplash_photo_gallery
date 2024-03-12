@@ -11,7 +11,7 @@ export default function SearchComponent({ image }) {
   const [searchedValues, setSearchedValues] = useState([]);
   useEffect(() => {
     ref.current?.focus();
-    setSearchedValues(localStorage.get())
+    setSearchedValues(localStorage.get() || [])
   }, [localStorage]);
 
   const inputSearch = (e) => {
