@@ -10,7 +10,6 @@
 
 # production
 /build
-/services/getSearch.js
 
 # misc
 .DS_Store

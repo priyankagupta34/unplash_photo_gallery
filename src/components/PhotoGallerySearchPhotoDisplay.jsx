@@ -22,7 +22,7 @@ export default function PhotoGallerySearchPhotoDisplay() {
               onClick={() => showImageDetails(image)}
               onMouseOver={() => showImageDetails(image)}
             />
-            {showImgDetail === id && (
+            {showImgDetail && (
               <div className="detailsContainer">hiii</div>
             )}
           </div>
