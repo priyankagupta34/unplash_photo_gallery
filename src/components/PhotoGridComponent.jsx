@@ -9,7 +9,6 @@ export default function PhotoGridComponent({ results }) {
   const showImageDetails = (image) => {
     if (showImgDetail === image.id) setShowImgDetail("");
     else setShowImgDetail(image.id);
-    console.log("image", image);
   };
   const downloadPhotoSyn = async (photoId) => {
     const downloaded = await downloadPhoto(photoId);
@@ -23,41 +22,44 @@ export default function PhotoGridComponent({ results }) {
     document.body.removeChild(aTag);
   };
 
-  // "#262626"
   return (
-    <div className="imageDisplayContainer">
-      {results.map((image) => {
-        const { urls, alt_description, id, links, likes } = image;
-        return (
-          <div className="imageGrid" key={id}>
-            <div className="iconHeart">
-              <FaRegHeart /> <span>{`Likes: ${likes}`}</span>
-            </div>
-            <div
-              className="icon"
-              onClick={() => downloadPhotoSyn(links.download_location)}
-            >
-              <IoCloudDownloadOutline />
-            </div>
-
-            <img
-              className="imageDisplay"
-              src={urls.small}
-              alt={alt_description}
-              onClick={() => showImageDetails(image)}
-              onMouseOver={() => showImageDetails(image)}
-            />
-            {showImgDetail === id && (
-              <div
-                className="detailsContainer"
-                onClick={() => setShowImgDetail("")}
-              >
-                <PhotoThumbnailDetailComponent image={image} />
+    <div
+      style={{ textAlign: "center", display: "flex", justifyContent: "center" }}
+    >
+      <div className="imageDisplayContainer">
+        {results.map((image) => {
+          const { urls, alt_description, id, links, likes } = image;
+          return (
+            <div className="imageGrid" key={id}>
+              <div className="iconHeart">
+                <FaRegHeart /> <span>{`Likes: ${likes}`}</span>
               </div>
-            )}
-          </div>
-        );
-      })}
+              <div
+                className="icon"
+                onClick={() => downloadPhotoSyn(links.download_location)}
+              >
+                <IoCloudDownloadOutline />
+              </div>
+
+              <img
+                className="imageDisplay"
+                src={urls.small}
+                alt={alt_description}
+                onClick={() => showImageDetails(image)}
+                onMouseOver={() => showImageDetails(image)}
+              />
+              {showImgDetail === id && (
+                <div
+                  className="detailsContainer"
+                  onClick={() => setShowImgDetail("")}
+                >
+                  <PhotoThumbnailDetailComponent image={image} />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

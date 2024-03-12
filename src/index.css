@@ -5,10 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 97vw;
+  width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  margin: 10px auto;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
@@ -24,6 +28,7 @@ code {
 }
 
 .imageGrid {
+  background-color: white;
   position: relative;
   overflow: hidden;
   border: 0.5px solid #e2e2e2;
@@ -70,8 +75,9 @@ img.imageDisplay {
 
 .homePageContainer {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .icon {
@@ -138,10 +144,50 @@ img.imageDisplay {
   width: 100px;
 }
 
+.homeBackground {
+  height: 42vh;
+  width: 98vw;
+  text-align: center;
+}
+
+.searchArea {
+  display: flex;
+  justify-content: center;
+}
+
+.searchArea input {
+  width: 30vw;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: -2px 2px 4px 0 gray;
+  outline: none;
+  padding: 12px;
+  font-weight: 100;
+}
+
+.searchArea button {
+
+  padding: 12px;
+  width: 5vw;
+  background-color: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 0 gray;
+}
+
+title {
+  display: block;
+  text-align: center;
+  padding: 2%;
+  font-weight: 100;
+  font-size: xxx-large;
+}
+
 @media only screen and (max-width: 600px) {
   .iconHeart span {
     font-size: xx-small;
   }
+
   .imageDisplayContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
