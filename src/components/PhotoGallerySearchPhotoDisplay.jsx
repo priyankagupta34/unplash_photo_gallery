@@ -20,7 +20,7 @@ export default function PhotoGallerySearchPhotoDisplay() {
   return (
     <div
       style={{
-        backgroundImage: `linear-gradient(to top, #ffffff99 100%, #ffffff99 100%, #ffffff99 100%), 
+        backgroundImage: `linear-gradient(to top, #ffffffb3 100%, #ffffffb3 100%, #ffffffb3 100%), 
         url(${results[idx]?.urls?.regular})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

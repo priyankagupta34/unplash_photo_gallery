@@ -106,17 +106,17 @@ img.imageDisplay {
 
 .photoDetailBlock {
   justify-items: end;
-    background: #00000087;
-    padding: 2%;
-    border-radius: 3px;
-    height: 4vh;
-    font-size: xx-small;
-    color: white ! IMPORTANT;
-    width: 43%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 1px 1px 2px #c5c3c3;
+  background: #00000087;
+  padding: 2%;
+  border-radius: 3px;
+  height: 4vh;
+  font-size: xx-small;
+  color: white ! IMPORTANT;
+  width: 43%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 1px 2px #c5c3c3;
 }
 
 .photoDetailBlockDiv {
@@ -192,14 +192,16 @@ title {
   
 } */
 
-.recents{
+.recents {
   margin: 34px;
   display: flex;
   justify-content: center;
 }
-.chips{
+
+.chips {
   padding: 5px;
-  background: rgb(253, 253, 253);;
+  background: rgb(253, 253, 253);
+  ;
   margin: 8px;
   border-radius: 2px;
   font-size: x-small;
@@ -207,7 +209,7 @@ title {
   cursor: pointer;
 }
 
-.profileImageThumb{
+.profileImageThumb {
   display: block;
   border-radius: 50%;
   width: 17%;
@@ -241,16 +243,29 @@ title {
   .photoDetailBlockDiv {
     font-size: xx-small;
   }
-  .homeBackground{
+
+  .homeBackground {
     height: 28vh;
   }
-  .searchArea button{
+
+  .searchArea button {
     width: 10vw;
   }
-  .searchArea input{
+
+  .searchArea input {
     width: 50vw;
   }
+
   .recents {
     margin: 13px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  title {
+    padding: 3%;
+    font-size: 38px;
+    margin-bottom: 9px;
+    padding-top: 39px;
   }
 }
