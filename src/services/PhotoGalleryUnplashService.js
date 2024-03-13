@@ -7,7 +7,7 @@ const UNSPLASH_ROOT = process.env.REACT_APP_API_URL;
 
 // https://unsplash.com/documentation#search
 export const getPhotosByQuery = async ( query ) => {
-  console.log('query ', query)
+  // console.log('query ', query)
   const { data } = await axios.get(
     `${UNSPLASH_ROOT}/search/photos?query=${query}&client_id=${clientId}&per_page=40`
   );

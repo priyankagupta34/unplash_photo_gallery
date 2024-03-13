@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function PhotoThumbnailDetailComponent({image}) {
-    const {user, created_at, /*tags, likes*/} = image;
-    const date = `${new Date(created_at).getDate()}-${new Date(created_at).getMonth()}-${new Date(created_at).getFullYear()}`;
+export default function PhotoThumbnailDetailComponent({ image }) {
+  const { user /*tags, likes*/ } = image;
   return (
-    <div className='photoDetailBlock'>
-        <div className='photoDetailBlockDiv'>
-            <Link to={user.links.portfolio} >{user.name}</Link>
-        </div>
-        <div className='photoDetailBlockDiv'>
-            {date}
-        </div>
-    </div>
-  )
+    <Link to={user.links.portfolio} className="photoDetailBlock">
+      <img
+        src={user?.profile_image?.small}
+        alt={user?.name}
+        className="profileImageThumb"
+      />
+
+      <span>{user.name}</span>
+    </Link>
+  );
 }

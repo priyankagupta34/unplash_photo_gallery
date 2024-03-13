@@ -48,14 +48,10 @@ export default function PhotoGridComponent({ results }) {
                 onClick={() => showImageDetails(image)}
                 onMouseOver={() => showImageDetails(image)}
               />
-              {showImgDetail === id && (
-                <div
-                  className="detailsContainer"
-                  onClick={() => setShowImgDetail("")}
-                >
-                  <PhotoThumbnailDetailComponent image={image} />
-                </div>
-              )}
+
+              <div className="detailsContainer">
+                <PhotoThumbnailDetailComponent image={image} />
+              </div>
             </div>
           );
         })}
