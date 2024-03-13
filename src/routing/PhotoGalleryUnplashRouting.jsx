@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import PhotoGallerySearchPhotoDisplay from "../components/PhotoGallerySearchPhotoDisplay";
 import NotFound from "../components/NotFound";
 import { getPhotosByQuery } from "../services/PhotoGalleryUnplashService";
@@ -9,7 +9,7 @@ import PhotoDisplayContainer from "../components/PhotoDisplayContainer";
 
 export default function PhotoGalleryUnplashRouting() {
   const searchRandomWord = chooseOneWord();
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       element: <PhotoGallerySearchPhotoDisplay />,
       path: "/",
@@ -32,17 +32,6 @@ export default function PhotoGalleryUnplashRouting() {
           },
         },
       ],
-    },
-    {
-      element: <PhotoDisplayContainer />,
-      path: "/photos/:searchKeyWord",
-      errorElement: <NotFound />,
-      loader: async ({ params }) => {
-        const { searchKeyWord } = params;
-        const res = await getPhotosByQuery(searchKeyWord);
-        console.log("res ", res.results);
-        return res.results;
-      },
     },
   ]);
 
