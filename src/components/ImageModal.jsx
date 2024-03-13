@@ -37,10 +37,10 @@ export default function ImageModal({ openImageModal, image, moveImage }) {
                         <FaRegArrowAltCircleLeft />
                       </div>
                       <img
+                        className="modalImg"
                         src={image.urls.full}
                         alt={image.alt_description}
-                        style={{ height: "89vh", width: "87%" }}
-                      />
+                       />
                       <div
                         className="modalArrow rightArrow"
                         onClick={() => moveImage("increase")}

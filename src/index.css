@@ -257,6 +257,7 @@ title {
   height: 95%;
   border-radius: 5px;
   width: 56vw;
+  overflow: hidden;
 }
 
 .portalClassContainer {
@@ -288,6 +289,11 @@ title {
   right: 28%;
   left: auto;
   cursor: pointer;
+}
+
+.modalImg{
+  height: 89vh;
+  width: 87% 
 }
 
 @media only screen and (max-width: 600px) {
@@ -349,6 +355,21 @@ title {
   }
   .portalClass{
     width: 92vw;
-    height: 85%;
+    height: 61%;
+    top: -8%;
+    position: relative;
+  }
+  .modalImg{
+    height: auto;
+  }
+  .imageModal{
+    height: 53vh;
+  }
+  .modalArrow{
+    left: 3%;
+  }
+  .rightArrow{
+    right: 3%;
+    left: auto;
   }
 }
