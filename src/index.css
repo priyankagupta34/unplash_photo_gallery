@@ -220,6 +220,7 @@ title {
 
   .imageDisplayContainer {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3px;
   }
 
   .imageGrid {
@@ -227,8 +228,8 @@ title {
   }
 
   img.imageDisplay {
-    height: 10vh;
-    width: 77%;
+    height: 11.5vh;
+    width: 89%;
   }
 
   .photoDetailBlock {
