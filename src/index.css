@@ -283,6 +283,7 @@ title {
     box-shadow: 1px 0 4px black;
     border-radius: 44%;
     top: 40%;
+    z-index: 3;
 }
 
 .rightArrow{
@@ -294,6 +295,19 @@ title {
 .modalImg{
   height: 89vh;
   width: 87% 
+}
+
+.imgClosure{
+  text-align: center;
+  position: relative;
+}
+
+.loaderContainer{
+  position: fixed;
+  top: 52%;
+  height: 50px;
+  left: 45%;
+  width: 100px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -371,5 +385,9 @@ title {
   .rightArrow{
     right: 3%;
     left: auto;
+  }
+  .loaderContainer{
+    top: 43%;
+    left: 39%;
   }
 }
