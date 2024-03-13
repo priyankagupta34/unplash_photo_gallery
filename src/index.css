@@ -215,6 +215,81 @@ title {
   width: 17%;
 }
 
+#imagePortal {
+  width: 100vw;
+  height: 100vh;
+  background: #0000007d;
+  position: fixed;
+  top: 0;
+  z-index: 1999;
+  overflow: hidden;
+}
+
+.stop_scroll {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+}
+
+.imageModal {
+  background-color: white;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  width: max-content;
+}
+
+.imagePortalContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.portalClass {
+  background: white;
+  padding: 2%;
+  box-shadow: 2px 2px 8px black;
+  height: 95%;
+  border-radius: 5px;
+  width: 56vw;
+}
+
+.portalClassContainer {
+  overflow-y: auto;
+  height: 77vh;
+  overflow-x: hidden;
+  display: flex;
+    justify-content: center;
+}
+
+.modalTitle {
+  font-size: x-large;
+  font-weight: 100;
+  margin-bottom: 2%;
+  text-transform: capitalize;
+}
+
+.modalArrow{
+  position: fixed;
+    left: 28%;
+    background: white;
+    padding: 18px;
+    box-shadow: 1px 0 4px black;
+    border-radius: 44%;
+    top: 40%;
+}
+
+.rightArrow{
+  right: 28%;
+  left: auto;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .iconHeart span {
     font-size: xx-small;
@@ -269,7 +344,11 @@ title {
     padding-top: 39px;
   }
 
-  .chips{
+  .chips {
     margin: 4px;
+  }
+  .portalClass{
+    width: 92vw;
+    height: 85%;
   }
 }
