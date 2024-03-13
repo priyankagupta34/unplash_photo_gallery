@@ -153,6 +153,7 @@ img.imageDisplay {
 .searchArea {
   display: flex;
   justify-content: center;
+  height: 6vh;
 }
 
 .searchArea input {
@@ -161,13 +162,13 @@ img.imageDisplay {
   border-radius: 3px;
   box-shadow: -2px 2px 4px 0 gray;
   outline: none;
-  padding: 12px;
+  padding-left: 12px;
   font-weight: 100;
 }
 
 .searchArea button {
 
-  padding: 12px;
+  /* padding: 12px; */
   width: 5vw;
   background-color: white;
   border: 1px solid #e2e2e2;

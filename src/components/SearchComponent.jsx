@@ -33,11 +33,10 @@ export default function SearchComponent({ image }) {
     <div className="homeBackground">
       <title>Unplash Photo Gallery</title>
       <div className="searchArea">
-        <form onSubmit={inputSearch}>
+        <form onSubmit={inputSearch} style={{display: 'flex'}}>
           <input
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            className="inputOfSearch"
             ref={ref}
             placeholder="Search here"
           />
@@ -48,7 +47,7 @@ export default function SearchComponent({ image }) {
       </div>
       <div className="recents">
         {(searchedValues || []).map((sear) => (
-          <div className="chips" onClick={() => navigate(`/photos/${sear}`)}><IoIosSearch /> {sear}</div>
+          <div key={sear} className="chips" onClick={() => navigate(`/photos/${sear}`)}><IoIosSearch /> {sear}</div>
         ))}
       </div>
     </div>

@@ -33,6 +33,17 @@ export default function PhotoGalleryUnplashRouting() {
         },
       ],
     },
+    {
+      element: <PhotoDisplayContainer />,
+      path: "/photos/:searchKeyWord",
+      errorElement: <NotFound />,
+      loader: async ({ params }) => {
+        const { searchKeyWord } = params;
+        const res = await getPhotosByQuery(searchKeyWord);
+        console.log("res ", res.results);
+        return res.results;
+      },
+    },
   ]);
 
   return <RouterProvider router={router} />;
