@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createHashRouter } from "react-router-dom";
 import PhotoGallerySearchPhotoDisplay from "../components/PhotoGallerySearchPhotoDisplay";
 import NotFound from "../components/NotFound";
 import { getPhotosByQuery } from "../services/PhotoGalleryUnplashService";
@@ -10,6 +10,10 @@ import PhotoDisplayContainer from "../components/PhotoDisplayContainer";
 export default function PhotoGalleryUnplashRouting() {
   const searchRandomWord = chooseOneWord();
   const router = createHashRouter([
+    { 
+      path: "*", 
+      element: <Navigate to="/" /> 
+    },
     {
       element: <PhotoGallerySearchPhotoDisplay />,
       path: "/",
